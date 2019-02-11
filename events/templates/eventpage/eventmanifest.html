@@ -1,0 +1,68 @@
+<!--  Header
+<div class="container-fluid">
+
+    <header>
+        <nav class="navbar container-fluid">
+            <div class="container-fluid">
+                  <div class="navbar-header">
+                      <span class="navbar-brand"><a href="">FISPY</a></span>
+                  </div>
+
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Graduator</a></li>
+                    <li><a href="#">Event</a></li>
+                    <li><a href="#">Sign in	</a></li>
+                  </ul>
+            </div>
+        </nav>
+    </header>
+  </div>
+
+<a href="http://127.0.0.1:8000/admin/events/event/add/">Add event</a>
+
+-->
+{% load staticfiles %}
+
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<link href="{% static 'eventpage/bootstrap-combined.no-icons.min.css' %}" rel="stylesheet">
+<link href="{% static 'eventpage/font-awesome.css' %}" rel="stylesheet">
+<link href="{% static 'eventpage/eventcard.css' %}" rel="stylesheet">
+<div class="container profile">
+
+      {% for event in all_events %}
+  <div class="row">
+    <div class="span12">
+      <div class="well well-small clearfix">
+        <div class="row-fluid">
+          <div class="span2">
+             <img src="" class="img-polaroid"/>
+          </div>
+          <div class="span4">
+             <h2>{{event.Name}}</h2>
+            <ul class="unstyled">
+              <li><i class="icon-globe"></i> <b>{{event.eventVenue}}</b> </li>
+              <li><i class="icon-phone"></i> organizerphone</li>
+              <li><i class="icon-envelope"></i> organizeremail</li>
+              <li><i class="icon-globe"></i> <a href="http://suza.ac.tz">Organizer website</a></li>
+            </ul>
+          </div>
+          <div class="span6">
+          <ul class="inline stats">
+               <li> <b><span>  {{event.eventDate}}</span> </b> Event Date </li>
+               <!--<li> <span>50</span> Seats </li> -->
+               <li> <span>{{event.eventFee}}</span> Fees </li>
+          </ul>
+
+            <div><!--/span6-->
+            {{event.Description}}
+            </div><!--/row-->
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+      <!--Body content-->
+    </div>
+  </div>
+  </div>
+</div>
+<hr>
+{% endfor %}

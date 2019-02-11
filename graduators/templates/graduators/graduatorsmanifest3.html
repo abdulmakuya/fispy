@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+		<html>
+				<head>
+            <link rel="stylesheet" type="text/css" href="{% static 'graduators/styles/bootstrap.min.css' %}">
+					  <link rel="stylesheet" type="text/css" href="{% static 'graduators/index.css' %}">
+						<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+				</head>
+				<body>
+
+					<div class="container-fluid">
+
+							<header>
+									<nav class="navbar container-fluid">
+											<div class="container-fluid">
+														<div class="navbar-header">
+																<span class="navbar-brand"><a href="">FISPY</a></span>
+														</div>
+
+														<ul class="nav navbar-nav navbar-right">
+															<li><a href="#">Graduator</a></li>
+															<li><a href="#">Event</a></li>
+															<li><a href="#">Sign in	</a></li>
+														</ul>
+											</div>
+									</nav>
+							</header>
+						</div>
+
+
+
+            <div class="container">
+                <div class="row">
+									{% for graduator in all_graduators %}
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="well well-sm">
+                            <div class="row">
+
+                                <div class="col-sm-6 col-md-4">
+                                    <img src="{{graduator.image.url}}" alt="" class="img-rounded img-responsive" />
+                                </div>
+                                <div class="col-sm-6 col-md-8">
+                                    <a href="{{graduator.id}}"><h3>{{graduator.FullName}}</h3></a>
+                                    <h4>{{graduator.adress}}</h4>
+                                    <p>
+                                        <i>{{graduator.email}}<br /></i>
+                                        {{graduator.phone}}<br />
+                                        {{graduator.graduationYear}}</p>
+                                    <!-- Details button
+																	-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+										{% endfor %}
+                </div>
+            </div>
+
+<!--   footer
+									-->
+
+
+</body>
+</html>

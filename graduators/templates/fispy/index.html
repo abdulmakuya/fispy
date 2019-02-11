@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+		<html>
+				<head>
+					<link rel="stylesheet" type="text/css" href="{% static 'homepage/bootstrap/bootstrap.min.css' %}">
+					<link rel="stylesheet" type="text/css" href= "{% static 'homepage/index.css' %}" >
+					<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+				</head>
+				<body>
+							<div class="container-fluid">
+
+									<header>
+											<nav class="navbar container-fluid">
+										  		<div class="container-fluid">
+										  					<div class="navbar-header">
+											  						<span class="navbar-brand">GradNet</span>
+																</div>
+
+																<ul class="nav navbar-nav navbar-right">
+												  				<li><a href="http://127.0.0.1:8000/graduators">Graduator</a></li>
+												  				<li><a href="http://127.0.0.1:8000/events">Event</a></li>
+												  				<li><a href="http://127.0.0.1:8000/admin">Sign in	</a></li>
+																</ul>
+										  		</div>
+											</nav>
+									</header>
+
+		<br>
+			<section class=" container-fluid">
+				<center>
+					<article>
+							<div class="row logo container-fluid">
+									<div class="col-lg-8">
+											<img src="{% static 'homepage/image/logo.png' %} ">
+									</div>
+									<div class="col-lg-4">
+											<br>
+											<p><input type="email" name="email" placeholder="Enter Fullname"  class="form-control"></p>
+											<p><input type="texr" name="username" placeholder="Enter Your Email"  class="form-control"></p>
+											<p><input type="password" name="password" placeholder="Password" class="form-control"></p>
+											<p><input type="submit" name="btnReg" value="Sign Up" id="btnReg" class="form-control"></p>
+									</div>
+							</div>
+					</article>
+				</center>
+					<div class="jumbotron display">
+							<p>Hello Graduate, This will keep you Active for the time you are noy yet Employed, So if you think you are:</p>
+							<div class="row">
+							<center>
+									<div class="col-lg-4">
+											<img src="{% static 'homepage/image/i2.png' %}">
+											<div>Productive</div>
+									</div>
+									<div class="col-lg-4">
+											<img src=" {% static 'homepage/image/i1.png' %}">
+											<div>Organized</div>
+									</div>
+									<div class="col-lg-4">
+											<img src="{% static 'homepage/image/i3.png' %}">
+											<div>Reliable</div>
+									</div>
+							</center>
+							</div>
+					</div>
+			</section>
+			<footer>
+					<nav class="navbar navbar-fixed-bottom" >
+						  <span>SUZA DIT Final Year Project 2017</span>
+						  <div class="about">
+								  <span> <a href="#"> Contact </a> </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								  <span> <a href="#"> About </a> </span>
+						  </div>
+					</nav>
+			</footer>
+
+</div>
+</body>
+</html>

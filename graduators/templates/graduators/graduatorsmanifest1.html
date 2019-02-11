@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+		<html>
+				<head>
+					{% load staticfiles %}
+					<!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+          <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+          <!-- Latest compiled JavaScript -->
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+            <link rel="stylesheet" type="text/css" href="{% static 'graduators/styles/bootstrap/bootstrap.min.css' %}" />
+					  <link rel="stylesheet" type="text/css" href="{% static 'graduators/styles/css/index.css %}" />
+
+				</head>
+				<body>
+
+					<div class="container-fluid">
+
+							<header>
+									<nav class="navbar container-fluid">
+											<div class="container-fluid">
+														<div class="navbar-header">
+																<span class="navbar-brand"><a href="">FISPY</a></span>
+														</div>
+
+														<ul class="nav navbar-nav navbar-right">
+															<li><a href="#">Graduator</a></li>
+															<li><a href="#">Event</a></li>
+															<li><a href="#">Sign in	</a></li>
+														</ul>
+											</div>
+									</nav>
+							</header>
+						</div>
+
+
+
+            <div class="container">
+                <div class="row">
+									{% for graduator in all_graduators %}
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <div class="well well-sm">
+                            <div class="row">
+
+                                <div class="col-sm-6 col-md-4">
+                                    <img src="#" alt="" class="img-rounded img-responsive" />
+                                </div>
+                                <div class="col-sm-6 col-md-8">
+                                    <h3>{{graduator.FullName}}</h3>
+                                    <h4>{{graduator.adress}}</h4>
+                                    <p>
+                                        <i>{{graduator.email}}<br />
+                                        <i></i><a href="http://www.jquery2dotnet.com">{{graduator.phone}}</a><br />
+                                        <i></i>{{graduator.graduationYear}}</p>
+                                    <!-- Split button
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary">Social</button>
+                                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                                            <span class="caret"></span><span class="sr-only">Social</span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Twitter</a></li>
+                                            <li><a href="https://plus.google.com/+Jquery2dotnet/posts">Google +</a></li>
+
+                                            <li class="divider"></li>
+                                            <li><a href="#">Github</a></li>
+                                        </ul>
+                                    </div>
+																		-->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+						{% endfor %}
+<!--   footer
+						<footer>
+								<nav class="navbar navbar-fixed-bottom" >
+
+										<span>SUZA DIT Final Year Project 2017</span>
+										<div class="about"> <span> <a href="#">Contact</a>
+
+												</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+												<span><a href="#">About</a></span>
+										</div>
+								</nav>
+						</footer>
+
+						 -->
+
+
+</body>
+</html>
